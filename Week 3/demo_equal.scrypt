@@ -1,0 +1,11 @@
+contract DemoEqual {
+  int x;
+
+  constructor(int x) {
+      this.x = x;
+  }
+
+  public function equal(int y) {
+      require(y == this.x);
+  }
+}

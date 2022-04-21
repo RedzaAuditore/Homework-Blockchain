@@ -1,0 +1,17 @@
+contract DemoSum {
+  int x;
+  int y;
+
+  constructor(int x, int y) {
+      this.x = x;
+      this.y = y;
+  }
+
+  function sum(int a, int b) : int {
+      return a + b;
+  }
+
+  public function unlock(int z) {
+      require(z == this.sum(this.x, this.y));
+  }
+}

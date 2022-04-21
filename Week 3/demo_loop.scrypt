@@ -1,0 +1,15 @@
+contract DemoLoop {
+  int x;
+
+  constructor(int x) {
+      this.x = x;
+  }
+
+  public function unlock(int y) {
+      int sum = 0;
+      loop (3) {
+          sum = sum + this.x;
+      }
+      require(y == sum);
+  }
+}
